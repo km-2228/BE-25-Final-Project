@@ -14,9 +14,9 @@ const {
 
 router.get("/", getAllPengajar);
 router.get("/:id", getPengajarByID);
-router.post("/", addPengajar);
-router.delete("/:id", deletePengajarByID);
-router.put("/:id", updatePengajarByID);
+router.post("/",verifyAdmin, addPengajar);
+router.delete("/:id",verifyAdmin, deletePengajarByID);
+router.put("/:id",verifyAdmin, updatePengajarByID);
 router.delete("/all/:id", deleteAllPengajar);
 
 module.exports = router;

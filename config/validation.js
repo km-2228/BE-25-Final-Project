@@ -20,16 +20,20 @@ const loginValidation = (data) => {
 };
 const pesanLesValidation = (data) => {
   const schema = Joi.object({
-    pesertaLes: Joi.string().required(),
-    jenjangPendidikan: Joi.string().required(),
-    topik: Joi.string().required(),
+    teacherId: Joi.string().required(),
+    userId: Joi.string().required(),
+    biaya: Joi.string().required(),
+    jenjangMateri: Joi.string().required(),
+    topikMateri: Joi.string(),
     detilTopik: Joi.string(),
     tanggal: Joi.string().required(),
-    mulai: Joi.string().required(),
-    selesai: Joi.string().required(),
-    infotTambahan: Joi.string(),
-    pengajarID: Joi.string().required(),
-    userId: Joi.string().required(),
+    jamMulai: Joi.string().required(),
+    durasi: Joi.string().required(),
+    modeBelajar: Joi.string().required(),
+    alamat: Joi.string(),
+    maps: Joi.string(),
+    tambahan: Joi.string(),
+    
   });
   return schema.validate(data);
 };

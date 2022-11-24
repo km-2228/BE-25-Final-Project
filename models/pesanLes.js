@@ -2,16 +2,20 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose
 
 const pesanLesSchema = new Schema({
-  pesertaLes : String,
-  jenjangPendidikan : String,
-  topik : String,
+  teacherId : String,
+  userId : String,
+  biaya : String,
+  jenjangMateri : String,
+  topikMateri : String,
   detilTopik : String,
   tanggal : String,
-  mulai : String,
-  selesai : String,
-  infotTambahan : String,
-  pengajarID : String,
-  userId : String,
+  jamMulai : String,
+  durasi : String,
+  modeBelajar : String,
+  alamat : String,
+  maps : String,
+  tambahan : String,
+  
 })
 
 const PesanLes = mongoose.model("PesanLes", pesanLesSchema)
