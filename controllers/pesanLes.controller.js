@@ -71,7 +71,7 @@ module.exports = {
         }
         return res.status(200).json({
           doc,
-          message: "pengajar telah ditambah",
+          message: "update pesan les",
         });
       })
       .catch((err) => next(err));
